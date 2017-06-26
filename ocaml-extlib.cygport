@@ -1,7 +1,7 @@
 inherit ocaml
 
 NAME="ocaml-extlib"
-VERSION=1.5.1
+VERSION=1.7.1
 RELEASE=1
 CATEGORY="OCaml"
 SUMMARY="Collection of small OCaml libraries"
@@ -10,12 +10,11 @@ standard library for the OCaml programming langage. The purpose of this
 library is to add new functions to OCaml Standard Library modules, to modify
 some functions in order to get better performances or more safety, but also to
 provide new modules which should be useful for the average OCaml programmer."
-HOMEPAGE="http://code.google.com/p/ocaml-extlib/"
-SRC_URI="http://ocaml-extlib.googlecode.com/files/extlib-${VERSION}.tar.gz"
-SRC_DIR="extlib-${VERSION}"
+HOMEPAGE="https://github.com/ygrek/ocaml-extlib"
+SRC_URI="${HOMEPAGE}/archive/${VERSION}/ocaml-extlib-${VERSION}.tar.gz"
 
 src_compile() {
 	lndirs
 	cd ${B}
-	cygmake all opt
+	cygmake
 }
